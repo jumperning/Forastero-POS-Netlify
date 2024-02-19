@@ -6,6 +6,20 @@
  * @package WordPress
  */
 
+$servername = "srvc208.controlvps.com";
+$username = "max";
+$password = "m0m3nt0l1br3";
+$database = "test";
+
+// Crear una conexión
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Verificar la conexión
+if ($conn->connect_error) {
+  die("Falló la conexión: " . $conn->connect_error);
+} else {
+  echo "Conexión exitosa!";
+}
 /**
  * Tells WordPress to load the WordPress theme and output it.
  *
